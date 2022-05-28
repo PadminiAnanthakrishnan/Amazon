@@ -15,6 +15,7 @@ import { Service1Service } from './service/service1.service';
 import { MyCartCountService } from './service/my-cart-count.service';
 import { DisPricePipe } from './Pipes/dis-price.pipe';
 import { DiscountedpipePipe } from './pipe1/discountedpipe.pipe';
+import { PaymentComponent } from './auth/payment/payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { DiscountedpipePipe } from './pipe1/discountedpipe.pipe';
     MobliesComponent,
     DisPricePipe,
     DiscountedpipePipe,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

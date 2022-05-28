@@ -1,0 +1,48 @@
+<div class="slide-main-container">
+    <ul>
+        <!--<li *ngFor ="let slideimage of sildeimages" [class]="slidelist">
+            <div [class]="slidestatus">
+                <img src="assets/images/{{slideimage.image}}" class="imageslide">
+                <h3>{{slideimage.title}}</h3>
+            </div>
+        </li>-->
+        <li [ngSwitch]="sildeno" [class]="slidelist">
+            <div [class]="slidestatus" *ngSwitchCase="1">
+                <img src="assets/images/electronucs.png" class="imageslide">
+                <h3>Electronics</h3>
+            </div>
+        </li>
+        <li [ngSwitch]="sildeno" [class]="slidelist">
+            <div [class]="slidestatus" *ngSwitchCase="2">
+                <img src="assets/images/shopify.png" class="imageslide">
+                <h3>Shopping</h3>
+            </div>
+        </li>
+        <li [ngSwitch]="sildeno" [class]="slidelist">
+            <div [class]="slidestatus" *ngSwitchCase="3">
+                <img src="assets/images/echo-hero.png" class="imageslide">
+                <h3>Speakers</h3>
+            </div>
+        </li>
+    </ul>
+    <div class="slidechanger">
+        <button (click)="backward()"><</button>
+        <span>{{sildeno}}</span>
+        <button (click)="forward()">></button>
+    </div>
+    <!--<div class="slide-container active" id="cont1">
+        <div class="silde1">
+            <img src="assets/images/electronucs.png" class="imageslide">
+        </div> 
+    </div>
+    <div class="slide-container">
+        <div class="silde2">
+            <img src="assets/images/shopify.png" class="imageslide">
+        </div>
+    </div>
+    <div class="slide-container">
+        <div class="silde3">
+            <img src="assets/images/echo-hero.png" class="imageslide">
+        </div> 
+    </div>-->   
+</div>

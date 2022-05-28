@@ -1,0 +1,43 @@
+.main-cont{
+    position: relative;
+    top:150px;
+    width: 350px;
+    padding: 20px;
+    height: 450px;
+    background-color: aliceblue;
+    margin: auto;
+    box-sizing: border-box;
+}
+.signin-header{
+    text-align: center; 
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d3d3d3;   
+}
+.signin-content{
+    padding: 10px;
+    box-sizing: border-box;
+}
+.input-field{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    outline-style: none;
+}
+.submit-cont{
+    width: 100%;
+    padding: 10px;    
+    border-bottom: 1px solid #d3d3d3;
+    box-sizing: border-box;
+    text-align: center;
+}
+.submitbtn{
+    width: 100%;
+    text-decoration: none;
+    padding: 10px ;
+    box-sizing: border-box;
+    background-color: #3f495a;
+    color: white;
+    font-size: 15px;
+}

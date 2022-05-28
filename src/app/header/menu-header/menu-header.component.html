@@ -1,0 +1,17 @@
+<div class="menu-container">
+    <ul >
+        <li class="menu-list">
+            <a href="">
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </a>            
+        </li>
+        <li *ngFor="let menu of menus" class="menu-list">
+           <a [routerLink]="'moblies'">{{menu.menuname}}</a> 
+           <!--<ul>
+               <li *ngFor="let submenu of submenus" class="sub-menu-list">
+                   <a href="">{{submenu}}</a> 
+               </li>
+           </ul>-->
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,67 @@
+<div class="top-main-container">
+    <!--Logo-->
+    <div class="logo-main-container">
+        <a href="" class="logo-link-cont">
+            <img src="assets/images/amazon.png" class="logo-cont"/>
+            <span class="logo-expansion">{{logoexpansion}}</span>
+        </a>
+    </div>
+    <!--Location-->
+    <div class="location-main-container">
+        <div class="link-container">
+            <a href="" class="loction-link-cont">
+                <div class="location-icon-cont">
+                    <i class="fa fa-map-marker icon-style" aria-hidden="true"></i>
+                </div>
+                <div class="location-text-cont">
+                    <h5>{{locaddr1}}</h5>
+                    <p>{{locaddr2}}</p>
+                </div>
+            </a>
+        </div>        
+    </div>
+
+    <!--search-->
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchtxt" class="input-search"/>        
+        <a href=""><i class="fa fa-search search-icon" aria-hidden="true"></i></a>
+        <span>Searching for - </span><span>{{searchtxt}}</span>
+    </div>
+    
+    <!--flag container-->
+    <div class="flag-container">
+        <a href="" class="flag-link">
+            <img src="assets/images/flag.png" class="flag-img">
+        </a>        
+    </div>
+
+    <!--Signin container-->
+    <div class="signin-container">
+        <a [routerLink]="'signin'" class="signin-link">
+            <h5>{{account1}}</h5>
+            <p>{{account2}}</p>
+        </a>       
+    </div>
+
+    <!--Returns container-->
+    <div class="returns-container">
+        <a href="" class="returns-link">
+            <h5>{{return1}}</h5>
+            <h5>{{return2}}</h5>
+        </a>
+    </div>
+
+    <!--Cart container-->
+    <div class="cart-conatiner">
+        <a href="" class="cart-link">
+            <i class="fa fa-shopping-cart cart-icon" aria-hidden="true"><sup class="wishcnt" >{{cartcount.cartcnt}}</sup>Cart</i>
+        </a>
+    </div>
+
+    <!--Wish List container-->
+    <div class="cart-conatiner" >
+        <a  class="cart-link" (click) ="addwish()">            
+            <i class="{{wishclass}}" aria-hidden="true" ><sup class="wishcnt">{{wishcnt}}</sup>Wish</i>
+        </a>
+    </div>
+</div>

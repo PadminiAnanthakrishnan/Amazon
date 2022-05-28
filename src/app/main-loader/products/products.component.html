@@ -1,0 +1,73 @@
+<div class="product-main-container">
+    <section class="product-list-cont">  
+        <ul>
+            <li *ngFor="let product of Products" class="list-item">
+                <div class="list-sub-cont"> 
+                    <a class="list-link">  
+                        <input type="text" value="{{product.productid}}"  disabled="true" hidden>
+                        <h3>{{product.brandname  | titlecase}}-{{product.productname | titlecase}}
+                            <ng-container *ngIf="wishicon;then displaynoneicon;else displayicon">
+                            </ng-container>                                                      
+                            <ng-template #displaynoneicon>
+                                <a  class="btnwish" >
+                                    <i class="fa fa-heart wish-list-icon" (click)="wishlist()"  aria-hidden="true" ></i>
+                                </a>
+                            </ng-template>
+                            <ng-template #displayicon>
+                                <a  class="btnwish" >
+                                    <i class="fa fa-heart wish-list-icon-fill" (click)="wishlist()"  aria-hidden="true" ></i>
+                                </a>
+                            </ng-template>
+                            <!-- <i class="{{wishclass}}" (click)="wishlist(pid.value)"  aria-hidden="true"></i> -->
+                        </h3>                       
+                        <img src="assets/images/{{product.imagename}}" class="list-img">  
+                        <h3><span class="orgprice">{{product.price | disPrice: product.discount}} </span></h3>
+                        <h5>{{product.discount}}%</h5>   
+                        <h5><del>{{product.price | currency:'INR'}}</del></h5>                      
+                    </a>                   
+                </div> 
+                <div class="prod-foot">
+                    <a ><input type="button" value="{{cartbtnname}}" class="btn-style" (click)="addCart()"></a>
+                    
+                    <a [routerLink]="'buy'"><input type="button" value="{{wishbtnname}}" class="btn-style" ></a>
+                </div>
+            </li>
+        </ul>     
+    </section>
+
+    <div class="table-container">
+        <table class="table-list">
+            <tr>
+                <th>Image</th>
+                <th>Product id</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Discount</th>
+                <th>operation</th>
+            </tr>
+            <tr *ngFor="let product of Products">
+                <td style="width: 10%;">
+                    <img src="assets/images/{{product.imagename}}" class="tab-list-img">
+                </td>
+                <td style="width: 15%;">
+                    <h3>{{product.productid}}</h3>
+                </td>
+                <td style="width: 20%;">
+                    <h3>{{product.brandname}}-{{product.productname }}</h3>
+                </td>
+                <td style="width: 20%;">
+                    <h3><span class="orgprice">{{product.price | currency:'INR'}}</span></h3>
+                </td>
+                <td style="width: 20%;">
+                    <h3>{{product.discount}}%</h3> 
+                </td>
+                <td>
+                    <a (click)="addCart()"> <i class="fa fa-cart-plus tab-icon" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-trash tab-icon" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+

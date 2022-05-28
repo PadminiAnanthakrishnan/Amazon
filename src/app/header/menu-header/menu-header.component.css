@@ -1,0 +1,45 @@
+.menu-container::before{
+    content: "";
+    display:table;
+}
+.menu-container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.menu-container{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    top:100px;
+    background-color: #242f42;
+    box-sizing: border-box;
+}
+
+
+.menu-list{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+}
+.menu-list a{
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 18px;
+    color: white;
+}
+.menu-list:hover{
+    border: 1px solid white;    
+}
+.sub-menu-list{
+    width: 100px;
+    height: auto;
+    background-color: white;
+    color: rgb(134, 37, 37);
+    list-style-type: none;    
+}
+.sub-menu-list a{
+    text-decoration: none;
+    color: black;
+}
